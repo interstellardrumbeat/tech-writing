@@ -1,4 +1,4 @@
-# How effectively play your drumset with eDrumIn and Superior Drummer 3 on Debian
+# How-to effectively play your drumset with eDrumIn and Superior Drummer 3 on Debian
 
 ## Introduction
 
