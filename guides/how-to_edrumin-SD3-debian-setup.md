@@ -1,8 +1,10 @@
 # How effectively play your drum set with eDrumIn and Superior Drummer 3 on Debian
 
 ## Glossary
-*VST = Virtual Studio Technology
-*
+
+*VST = Virtual Studio Technology  
+*DAW = Digital Audio Workstation  
+
 
 ## Introduction
 
