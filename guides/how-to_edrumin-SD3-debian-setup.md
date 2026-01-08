@@ -4,6 +4,10 @@
 
 - VST = Virtual Studio Technology  
 - DAW = Digital Audio Workstation  
+- eDrumIn = hardware, a MIDI interface used to connect the drum kit to the PC
+- Superior Drummer 3 (SD3) = a VST, used to convert MIDI inputs in drums sounds
+- Module = a MIDI interface with VST integrated in one single hardware piece
+- Wine = compatibility layer, allows users to run Windows applications on Linux
 
 ## Introduction
 
