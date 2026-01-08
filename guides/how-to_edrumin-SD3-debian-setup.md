@@ -2,8 +2,8 @@
 
 ## Glossary
 
-* VST = Virtual Studio Technology  
-* DAW = Digital Audio Workstation  
+- VST = Virtual Studio Technology  
+- DAW = Digital Audio Workstation  
 
 ## Introduction
 
