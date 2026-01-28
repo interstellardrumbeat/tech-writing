@@ -25,7 +25,7 @@ This guide is born primarily from a need I have at least once per year, since I 
 
 ## Installation types
 
-The eDrumIn+SD3 setup on Debian can be used following different installation routes and setups (i.e. different bridges, software, sound drivers, DAWs, etc...). I have tested 3 ways, of which only one gives me the results I need and has proven effective. For completeness I will report a list of all the options, including the untested ones. 
+The eDrumIn+SD3 setup on Debian can be used following different installation routes and setups (i.e. different bridges, software, audio drivers, DAWs, etc...). I have tested 3 ways, of which only one gives me the results I need and has proven effective. For completeness I will report a list of all the options, including the untested ones. 
 
 NOTE: the main limitation comes from SD3, which does not have a Linux version and must be always installed in Wine. This will be the common factor to the different installation paths.
 From there, it all comes down to "where you want to install eDrumIn and how you want to use SD3 (directly in Wine or bridge to Linux)".
