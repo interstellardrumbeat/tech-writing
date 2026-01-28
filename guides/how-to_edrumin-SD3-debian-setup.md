@@ -59,8 +59,26 @@ The main features are:
 
 ### Step 1 - Install eDrumIn
 
-Download and install the eDrumIn interface at the following link:
+Download and install the eDrumIn interface at the following link:  
 [eDrumIn official website](https://www.audiofront.net/downloads.php)
+
+### Step 2 - Install Wine
+
+### Step 3 - Install SD3 in Wine
+
+### Step 4 - Install yabridge
+
+### Step 5 - Install Reaper
+
+### Step 6 - Install PipeWire-JACK (recommended)
+
+### Step 7 - Setup Reaper
+
+#### 7.1. Load SD3 and eDrumIn in Reaper
+
+#### 7.2. Configure audio for low-latency
+
+#### 7.3. Play
 
 ## Post installation
 
