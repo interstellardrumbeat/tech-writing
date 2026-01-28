@@ -60,7 +60,7 @@ The main features are:
 ### Step 1 - Install eDrumIn
 
 Download and install the eDrumIn interface at the following link:
-<a href="https://www.audiofront.net/downloads.php" target="_blank">eDrumIn official website</a>
+[eDrumIn official website](https://www.audiofront.net/downloads.php)
 
 ## Post installation
 
