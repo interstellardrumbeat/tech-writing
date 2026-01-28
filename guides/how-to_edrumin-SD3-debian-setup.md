@@ -22,7 +22,7 @@ From there, it all comes down to "where you want to install eDrumIn and how you 
 
 | | **Setup** | **Description** | **How-to** |
 |----| --------- | ------------- | ----------- |
-| 1. | eDrumIn (Linux) + SD3 (wine) + yabridge (Linux) + DAW (Linux, e.g. Reaper) | SD3 bridged to Linux and operated through a DAW (e.g. Reaper), except for small tweaks done directly in wine (i.e. personalize the kit with the original SD3 GUI) | [Link to section](#option-1.-sd3-bridged-to-linux-daw) |
+| 1. | eDrumIn (Linux) + SD3 (wine) + yabridge (Linux) + DAW (Linux, e.g. Reaper) | SD3 bridged to Linux and operated through a DAW (e.g. Reaper), except for small tweaks done directly in wine (i.e. personalize the kit with the original SD3 GUI) | [Link to section](#option-1-sd3-bridged-to-linux-daw) |
 | 2. | eDrumIn (Linux) + Pipewire-Jack (Linux) + SD3 (wine) + WineASIO (wine) | SD3 used without any DAW, directly in wine (as if in Windows) with the original fully working GUI | [Link to section](#) |
 | 3. | eDrumIn (Linux) + SD3 (wine) + yabridge (Linux) + Pipewire-Jack (Linux) + Carla (Linux) | SD3 bridged to Linux and operated through a Carla, except for small tweaks done directly in wine (i.e. personalize the kit with the original SD3 GUI) | [Link to section](#) |
 
@@ -36,7 +36,7 @@ The main requirements derive from SD3.
 
 ## Before you begin
 
-## OPTION 1. SD3 bridged to Linux DAW
+## OPTION 1 SD3 bridged to Linux DAW
 
 This procedure is the only stable one I managed to setup.
 
