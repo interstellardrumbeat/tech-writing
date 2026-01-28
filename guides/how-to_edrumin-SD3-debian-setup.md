@@ -11,9 +11,6 @@
 
 ## Introduction
 
-Playing electronic drum kits at home can be **painful** if you, like me, don't like buying and playing basic kits with pre-assembled modules, but prefer to complicate your life to get a better (and personalized) playing experience. 
-Of course, this path becomes even more complicated if you do not use Windows as your main OS. 
-
 This guide is born primarily from a need I have at least once per year, since I often format my PC. Every time, I end up trying to trace back all the steps required to install all the necessary libraries, software, etc...to finally play my electronic drum kit with the MIDI interface **eDrumIn** and the VST **Superior Drummer 3 (SD3)** on Debian (currently 13, Trixie). 
 
 ## Installation types
