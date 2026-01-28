@@ -74,11 +74,11 @@ Download and install the eDrumIn interface at the following link:
 
 ### Step 7 - Setup Reaper
 
-#### 7.1. Load SD3 and eDrumIn in Reaper
+    #### 7.1. Load SD3 and eDrumIn in Reaper
 
-#### 7.2. Configure audio for low-latency
+    #### 7.2. Configure audio for low-latency
 
-#### 7.3. Play
+    #### 7.3. Play
 
 ## Post installation
 
