@@ -26,6 +26,31 @@ From there, it all comes down to "where you want to install eDrumIn and how you 
 | 2. | eDrumIn (Linux) + Pipewire-Jack (Linux) + SD3 (wine) + WineASIO (wine) | SD3 used without any DAW, directly in wine (as if in Windows) with the original fully working GUI | [Link to section](#) |
 | 3. | eDrumIn (Linux) + SD3 (wine) + yabridge (Linux) + Pipewire-Jack (Linux) + Carla (Linux) | SD3 bridged to Linux and operated through a Carla, except for small tweaks done directly in wine (i.e. personalize the kit with the original SD3 GUI) | [Link to section](#) |
 
-## Acknowledgment
+## System requirements
 
-This guide is written following a template provided by [the Good Docs Project](https://www.thegooddocsproject.dev) and the [Diátaxis](https://diataxis.fr) framework.
+The main requirements derive from SD3. 
+- **FREE DISK SPACE**:
+    - _Minimum install_ - 100 GB (basic sound library download and installation space, plus other software)
+    - _Complete install_ - 325 GB (full sound library download and installation space, plus other software)
+- **RAM**: 4 GB (8 GB recommended)
+
+## Before you begin
+
+## OPTION 1. SD3 bridged to Linux DAW
+
+This procedure is the only stable one I managed to setup.
+
+The main features are:
+- eDrumIn on Linux
+- SD3 on Wine
+- yabridge on Linux and used to bridge SD3 from Wine to Linux
+- Reaper (or any other DAW you like) on Linux
+- eDrumIn+SD3 operated through the DAW
+
+### Step 1 - One-sentence description of the step
+
+## Post installation
+
+### Configuration options
+
+## Troubleshooting
