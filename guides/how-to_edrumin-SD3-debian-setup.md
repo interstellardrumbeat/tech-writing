@@ -69,10 +69,7 @@ dpkg --print-architecture
 dpkg --print-foreign-architectures
 ```
 The first command should give "amd64" the second "i386". 
-If no "i386" gets displayed, run
-`sudo dpkg --add-architecture i386 && sudo apt update`
-And verify again with
-`dpkg --print-foreign-architectures`
+If no "i386" gets displayed, run `sudo dpkg --add-architecture i386 && sudo apt update` and verify again with `dpkg --print-foreign-architectures`.
 
 Proceed to complete install with
 ```
