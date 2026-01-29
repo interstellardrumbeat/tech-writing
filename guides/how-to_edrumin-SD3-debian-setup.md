@@ -48,14 +48,13 @@ The main requirements derive from SD3.
 
 ## SETUP 1 - SD3 bridged to Linux DAW
 
-This setup is the only stable one I managed to setup.
-
 The main features are:
 - eDrumIn on Linux
 - SD3 on Wine
 - yabridge on Linux and used to bridge SD3 from Wine to Linux
 - Reaper (or any other DAW you like) on Linux
 - eDrumIn+SD3 operated through the DAW
+- SD3 can be personalized in Wine
 
 ### Step 1 - Install eDrumIn
 
@@ -64,15 +63,39 @@ Download and install the eDrumIn interface at the following link:
 
 ### Step 2 - Install Wine
 
-### Step 3 - Install SD3 in Wine
+SD3 operates on 64-bit architecture. Before proceeding, verify the architecture of your with
+```
+dpkg --print-architecture
+dpkg --print-foreign-architectures
+```
+The first command should give "amd64" the second "i386". 
+If no "i386" gets displayed, run
+`sudo dpkg --add-architecture i386 && sudo apt update`
+And verify again with
+`dpkg --print-foreign-architectures`
 
-### Step 4 - Install yabridge
+Proceed to complete install with
+```
+sudo apt install \
+      wine \
+      wine32 \
+      wine64 \
+      libwine \
+      libwine:i386 \
+      fonts-wine
+```
 
-### Step 5 - Install Reaper
+### Step X - Setup Wine
 
-### Step 6 - Install PipeWire-JACK (recommended)
+### Step X - Install SD3 in Wine
 
-### Step 7 - Setup Reaper
+### Step X - Install yabridge
+
+### Step X - Install Reaper
+
+### Step X - Install PipeWire-JACK (recommended)
+
+### Step X - Setup Reaper
 
 &nbsp; **7.1. Load SD3 and eDrumIn in Reaper**
 
@@ -85,3 +108,6 @@ Download and install the eDrumIn interface at the following link:
 ### Configuration options
 
 ## Troubleshooting
+
+To edit later. Temporary notes:
+1) wineHQ instead of standard wine;
