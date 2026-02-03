@@ -8,6 +8,6 @@ This folder contains **technical writing samples** created for software, tools, 
 
 ## Guides
 
-Conceptual or procedural guides that explain **how to approach a specific problem**.  
-Each guide is written to support readability, clarity, and practical usability.
+Conceptual or procedural guides that explain **how to approach a specific problem**. Each guide is written to support readability, clarity, and practical usability.
+
 
