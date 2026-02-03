@@ -1,4 +1,4 @@
-# Technical Writing Portfolio
+# Technical Writing
 
 ## Overview
 
@@ -10,3 +10,4 @@ This folder contains **technical writing samples** created for software, tools, 
 
 Conceptual or procedural guides that explain **how to approach a specific problem**.  
 Each guide is written to support readability, clarity, and practical usability.
+
