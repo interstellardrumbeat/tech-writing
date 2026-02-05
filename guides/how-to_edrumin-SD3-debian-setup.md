@@ -63,7 +63,7 @@ Download and install the eDrumIn interface at the following link:
 
 ### Step 2 - Install Wine
 
-SD3 operates on 64-bit architecture. Before proceeding, verify the architecture of your with:
+SD3 operates on 64-bit architecture. Before proceeding, verify the architecture of your PC with:
 ```
 dpkg --print-architecture
 dpkg --print-foreign-architectures
