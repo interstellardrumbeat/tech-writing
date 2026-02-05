@@ -84,6 +84,15 @@ sudo apt install \
 
 ### Step X - Setup Wine
 
+Once installed, proceed with the creation and configuration of the wine prefix (the virtual Windows environment):
+```
+WINEPREFIX=~/wine-sd3 winecfg 
+```
+
+The name for the prefix can be anything you want. I use _wine-sd3_, since I have multiple dedicated prefixes.
+
+
+
 ### Step X - Install SD3 in Wine
 
 ### Step X - Install yabridge
