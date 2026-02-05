@@ -90,8 +90,7 @@ WINEPREFIX=~/wine-sd3 winecfg
 ```
 
 The name for the prefix can be anything you want. I use _wine-sd3_, since I have multiple dedicated prefixes.
-
-
+`winecfg` will open the prefix configuration GUI. You can simply close it right away.
 
 ### Step X - Install SD3 in Wine
 
