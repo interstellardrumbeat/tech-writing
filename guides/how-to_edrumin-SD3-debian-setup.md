@@ -82,7 +82,7 @@ sudo apt install \
       fonts-wine
 ```
 
-### Step X - Setup Wine
+### Step 3 - Setup Wine
 
 Once installed, proceed with the creation and configuration of the wine prefix (the virtual Windows environment):
 ```
