@@ -194,7 +194,7 @@ context.properties = {
 
 This will set the buffer to 64 samples, which is perfect to play.
 
->IMPORTANT: If your audio device does not support 64 samples, you need to set up the buffer to 128 otherwise you might encounter audio distortion when playing. See [Troubleshooting](#troubleshootin) for details.
+>IMPORTANT: If your audio device does not support 64 samples, you need to set up the buffer to 128 otherwise you might encounter audio distortion when playing. See [Troubleshooting](#troubleshooting) for details.
 
 ### Step 8 - Run and configure Reaper
 
@@ -203,7 +203,7 @@ A major problem I encountered and that I have not solved, is that, to efficientl
 pw-jack reaper
 ```
 
-This forces Reaper to run using the PipeWire-JACK audio driver. In my case, running Reaper in any other way, would cause it to being unable to find the correct driver and give an error. See [Troubleshooting](#troubleshootin) for details.
+This forces Reaper to run using the PipeWire-JACK audio driver. In my case, running Reaper in any other way, would cause it to being unable to find the correct driver and give an error. See [Troubleshooting](#troubleshooting) for details.
 
 #### X.1. Load eDrumIn in Reaper
 
