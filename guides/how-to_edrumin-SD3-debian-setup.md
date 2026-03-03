@@ -95,8 +95,7 @@ The name for the prefix can be anything you want. I use _wine-sd3_, since I have
 
 ### Step 4 - Install SD3
 
-&nbsp;
-&nbsp; **4.1. Install SD3 in your wine prefix**
+#### 4.1. Install SD3 in your wine prefix**
 
 Download the [Toontrack Product Manager](https://www.toontrack.com/product-manager/) and install it in the Wine prefix you have previously created, as follows (you might need to rename the exe):
 ```
