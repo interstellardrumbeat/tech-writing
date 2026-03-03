@@ -148,7 +148,7 @@ export PATH="$HOME/.local/share/yabridge:$PATH"
 
 #### 5.2. Register your VST folder in Yabridge
 
-Using the path of the VST folder in your wine prefix from [Step 4.2](#4.2-check-the-vst-folder), tell yabridge where to find the installed VST:
+Using the path of the VST folder in your wine prefix from Step 4.2, tell yabridge where to find the installed VST:
 ```
 yabridgectl add "$HOME/wine-sd3/drive_c/Program Files/Common Files/VST3"
 ```
