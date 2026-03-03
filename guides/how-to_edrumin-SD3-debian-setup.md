@@ -203,18 +203,18 @@ This will set the buffer to 64 samples, which is perfect to play.
 
 ### Step 8 - Run and configure Reaper
 
-Run reaper through JACK audio driver via terminal, as follows:
+Run reaper through JACK via terminal, as follows:
 ```
 pw-jack reaper
 ```
 
 This forces it to run using the PipeWire-JACK audio driver. In my case, running Reaper in any other way, would cause it to being unable to find the correct driver and give an error. See [Troubleshooting](#troubleshooting) for details.
 
-#### X.1. Load eDrumIn in Reaper
+#### 8.1. Load eDrumIn in Reaper
 
-#### X.2. Load SD3 in Reaper
+#### 8.2. Load SD3 in Reaper
 
-#### X.3. Play
+#### 8.3. Play
 
 ## Post installation
 
