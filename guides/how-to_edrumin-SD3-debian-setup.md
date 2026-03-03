@@ -5,6 +5,7 @@
 - [Introduction](#introduction)
 - [Installation types](#installation-types)
 - [System requirements](#system-requirements)
+- [Before you begin](#before-you-begin)
 - [SETUP 1 - SD3 bridged to Linux DAW](#setup-1---sd3-bridged-to-linux-daw)
 - [Post installation](#post-installation)
 - [Troubleshooting](#troubleshooting)
@@ -42,7 +43,12 @@ The main requirements derive from SD3.
     - _Minimum install_ - 100 GB (basic sound library download and installation space, plus other software)
     - _Complete install_ - 325 GB (full sound library download and installation space, plus other software)
 - **RAM**: minimum 4 GB (8 GB recommended)
-- **External AUDIO card/interface**: for minimal latency (integrated AUDIO card don't work well)
+
+## Before you begin 
+
+To efficiently play drums with this system I recommend an external AUDIO card/interface for minimal latency (integrated AUDIO card don't work well). 
+
+Many cheap models are available, such as the Fosurite Scarlett Series, but some models handle low buffering samples (hence, lower latency) better than other. The limit is your budget.
 
 ## SETUP 1 - SD3 bridged to Linux DAW
 
@@ -197,12 +203,12 @@ This will set the buffer to 64 samples, which is perfect to play.
 
 ### Step 8 - Run and configure Reaper
 
-Run reaper plus JACK audio driver through terminal, as follows:
+Run reaper through JACK audio driver via terminal, as follows:
 ```
 pw-jack reaper
 ```
 
-This forces Reaper to run using the PipeWire-JACK audio driver. In my case, running Reaper in any other way, would cause it to being unable to find the correct driver and give an error. See [Troubleshooting](#troubleshooting) for details.
+This forces it to run using the PipeWire-JACK audio driver. In my case, running Reaper in any other way, would cause it to being unable to find the correct driver and give an error. See [Troubleshooting](#troubleshooting) for details.
 
 #### X.1. Load eDrumIn in Reaper
 
