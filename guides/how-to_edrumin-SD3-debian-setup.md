@@ -198,7 +198,7 @@ This will set the buffer to 64 samples, which is perfect to play.
 
 ### Step 8 - Run and configure Reaper
 
-A major problem I encountered and that I have not solved, is that, to efficiently run Reaper with PipeWire-JACK I need to run it through terminal, as follows:
+Run reaper plus JACK audio driver through terminal, as follows:
 ```
 pw-jack reaper
 ```
