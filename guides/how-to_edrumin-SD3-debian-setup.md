@@ -1,4 +1,4 @@
-# How effectively play your drum set with eDrumIn and Superior Drummer 3 on Debian
+# How to play your drum set with eDrumIn and Superior Drummer 3 on Debian
 
 ## Table of Contents  
 - [Glossary](#glossary)
@@ -42,7 +42,7 @@ The main requirements derive from SD3.
 - **FREE DISK SPACE**:
     - _Minimum install_ - 100 GB (basic sound library download and installation space, plus other software)
     - _Complete install_ - 325 GB (full sound library download and installation space, plus other software)
-- **RAM**: 4 GB (8 GB recommended)
+- **RAM**: minimum 4 GB (8 GB recommended)
 
 ## Before you begin
 
@@ -79,22 +79,65 @@ sudo apt install \
       wine64 \
       libwine \
       libwine:i386 \
-      fonts-wine
+      fonts-wine \
+      winetricks
 ```
 
 ### Step 3 - Setup Wine
 
-Once installed, proceed with the creation and configuration of the wine prefix (the virtual Windows environment):
+Once installed, proceed with the creation and configuration of the wine prefix (the virtual Windows environment), running the following command in the terminal:
 ```
 WINEPREFIX=~/wine-sd3 winecfg 
 ```
 
 The name for the prefix can be anything you want. I use _wine-sd3_, since I have multiple dedicated prefixes.  
-`winecfg` will open the prefix configuration GUI. You can simply close it right away.
+`winecfg` will open the prefix configuration GUI. Check for if the selected OS is Windows 10 (or 11). If not change it and then close the GUI.
 
-### Step X - Install SD3 in Wine
+### Step 4 - Install SD3
+
+&nbsp; **4.1. Install SD3 in your wine prefix**
+
+Download the [Toontrack Product Manager](https://www.toontrack.com/product-manager/) and install it in the Wine prefix you have previously created, as follows (you might need to rename the exe):
+```
+wine-sd3 ToontrackProductManagerInstaller.exe
+```
+
+This operation will require some time since it will trigger the installation of all the required .NET dependencies. 
+Once completed, open the Toontrack Product Manager and proceed with the installation of SD3.
+>TIP: To minimize the time for the setup I suggest doing the minimal install, i.e. only the software and the main libraries. In this way, you have wasted less time in case something goes wrong and you have to delete the wine prefix restarting from zero. 
+
+&nbsp; **4.2. Check the VST folder**
+
+Since it will be need for yabridge, verify that SD3 has been correctly installed.
+The folder should be somewhere like:
+```
+~/wine-sd3/drive_c/Program Files/Common Files/VST3/
+```
+and it should contain `Superior Drummer 3.vst3`.
 
 ### Step X - Install yabridge
+
+Yabridge can be easily installed following the instructions on the corresponding [GitHub repo](https://github.com/robbert-vdh/yabridge). 
+For the sake of simplicity I will add here the section of the original Yabridge README dedicated to Debian.
+
+>1. First download the latest version of yabridge from the [releases
+        page](https://github.com/robbert-vdh/yabridge/releases). These binaries
+        currently target Ubuntu 20.04, and should work on any other distro
+        that's newer than that.
+>2. Extract the contents of the downloaded archive to `~/.local/share`, such
+        that the file `~/.local/share/yabridge/yabridgectl` exists after
+        extracting. You can extract an archive here from the command line with
+        `tar -C ~/.local/share -xavf yabridge-x.y.z.tar.gz`. If you're
+        extracting the archive using a GUI file manager or archive tool, then
+        make sure that hidden files and directories are visible by pressing
+        <kbd>Ctrl+H</kbd>. You should also double check that your archive
+        extraction tool didn't create an additional subdirectory in
+        `~/.local/share`. Dragging and dropping the `yabridge` directory from
+        the archive directly to `~/.local/share` is the best way to make sure
+        this doesn't happen.
+>3. **Whenever any step after this mentions running `yabridgectl <something>`,
+        then you should run `~/.local/share/yabridge/yabridgectl <something>`
+        instead.**
 
 ### Step X - Install Reaper
 
