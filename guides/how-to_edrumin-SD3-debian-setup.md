@@ -95,6 +95,7 @@ The name for the prefix can be anything you want. I use _wine-sd3_, since I have
 
 ### Step 4 - Install SD3
 
+&nbsp;
 &nbsp; **4.1. Install SD3 in your wine prefix**
 
 Download the [Toontrack Product Manager](https://www.toontrack.com/product-manager/) and install it in the Wine prefix you have previously created, as follows (you might need to rename the exe):
@@ -104,8 +105,9 @@ wine-sd3 ToontrackProductManagerInstaller.exe
 
 This operation will require some time since it will trigger the installation of all the required .NET dependencies. 
 Once completed, open the Toontrack Product Manager and proceed with the installation of SD3.
->TIP: To minimize the time for the setup I suggest doing the minimal install, i.e. only the software and the main libraries. In this way, you have wasted less time in case something goes wrong and you have to delete the wine prefix restarting from zero. 
+>TIP: To minimize the time for the setup I suggest doing the minimal install, i.e. only the software and the main libraries. In this way, you have wasted less time in case something goes wrong and you have to delete the wine prefix restarting from zero.
 
+&nbsp;
 &nbsp; **4.2. Check the VST folder**
 
 Since it will be need for yabridge, verify that SD3 has been correctly installed.
@@ -115,7 +117,10 @@ The folder should be somewhere like:
 ```
 and it should contain `Superior Drummer 3.vst3`.
 
-### Step X - Install yabridge
+### Step 5 - Install and Configure Yabridge 
+
+&nbsp;
+&nbsp; **5.1. Install Yabridge**
 
 Yabridge can be easily installed following the instructions on the corresponding [GitHub repo](https://github.com/robbert-vdh/yabridge). 
 For the sake of simplicity I will add here the section of the original Yabridge README dedicated to Debian.
@@ -138,6 +143,24 @@ For the sake of simplicity I will add here the section of the original Yabridge 
 >3. **Whenever any step after this mentions running `yabridgectl <something>`,
         then you should run `~/.local/share/yabridge/yabridgectl <something>`
         instead.**
+
+For easier use, you can add yabridge to your PATH with (check and edit with your correct path):
+```
+export PATH="$HOME/.local/share/yabridge:$PATH"
+```
+
+&nbsp;
+&nbsp; **5.2. Register your VST folder in Yabridge**
+
+Using the path of the VST folder in your wine prefix from [Step 4.2](#step-4---install-sd3), tell yabridge where to find the installed VST:
+```
+yabridgectl add "$HOME/wine-sd3/drive_c/Program Files/Common Files/VST3"
+```
+synchronize with:
+```
+yabridgectl sync
+```
+and verify the correct registration by checking if there the `~/.vst3/yabridge/` folder has been created.
 
 ### Step X - Install Reaper
 
