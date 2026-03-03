@@ -6,7 +6,7 @@
 - [Installation types](#installation-types)
 - [System requirements](#system-requirements)
 - [Before you begin](#before-you-begin)
-- [OPTION 1 - SD3 bridged to Linux DAW](#setup-1---sd3-bridged-to-linux-daw)
+- [SETUP 1 - SD3 bridged to Linux DAW](#setup-1---sd3-bridged-to-linux-daw)
 - [Post installation](#post-installation)
 - [Troubleshooting](#troubleshooting)
 
@@ -43,14 +43,13 @@ The main requirements derive from SD3.
     - _Minimum install_ - 100 GB (basic sound library download and installation space, plus other software)
     - _Complete install_ - 325 GB (full sound library download and installation space, plus other software)
 - **RAM**: minimum 4 GB (8 GB recommended)
-
-## Before you begin
+- **External AUDIO card/interface**: for minimal latency (integrated AUDIO card don't work well)
 
 ## SETUP 1 - SD3 bridged to Linux DAW
 
-The main features are:
+The main features of this setup are:
 - eDrumIn on Linux
-- SD3 on Wine
+- SD3 in Wine
 - yabridge on Linux and used to bridge SD3 from Wine to Linux
 - Reaper (or any other DAW you like) on Linux
 - eDrumIn+SD3 operated through the DAW
@@ -158,15 +157,57 @@ yabridgectl sync
 ```
 and verify the correct registration by checking if there the `~/.vst3/yabridge/` folder has been created.
 
-### Step X - Install Reaper
+### Step 6 - Install Reaper (or any other DAW of your choice)
 
-### Step X - Install PipeWire-JACK (recommended)
+If you go for Reaper, download it and install it from [here](https://www.reaper.fm/download.php).
 
-### Step X - Setup Reaper
+Instructions for installation are given on the readme inside the downloaded .tar.xz file, but it's pretty straightforward: first make the `./install_reaper.sh` script executable with the usual `sudo chmod +x /path/install-reaper.sh` command, then run it from the terminal.   
 
-#### X.1. Load SD3 and eDrumIn in Reaper
+### Step 7 - Install and configure PipeWire-JACK
 
-#### X.2. Configure audio for low-latency
+#### 7.1. Install PipeWire-JACK
+
+Before configuring Reaper, we need a powerful native AUDIO-driver, such as PipeWire-JACK, which works well with an external audio card for minimal latency.
+
+Install it with:
+```
+sudo apt install pipewire-audio pipewire-jack qpwgraph
+systemctl --user restart pipewire pipewire-pulse
+```
+and launch `qpwgraph` to verify that you external audio device is recognised. 
+
+#### 7.2. Configure for minimal audio latency
+
+Create or edit:
+```
+~/.config/pipewire/pipewire.conf.d/99-lowlatency.conf
+```
+and add:
+```
+context.properties = {
+    default.clock.rate          = 48000
+    default.clock.quantum       = 64
+    default.clock.min-quantum   = 32
+    default.clock.max-quantum   = 128
+}
+```
+
+This will set the buffer to 64 samples, which is perfect to play.
+
+>IMPORTANT: If your audio device does not support 64 samples, you need to set up the buffer to 128 otherwise you might encounter audio distortion when playing. See [Troubleshooting](#troubleshootin) for details.
+
+### Step 8 - Run and configure Reaper
+
+A major problem I encountered and that I have not solved, is that, to efficiently run Reaper with PipeWire-JACK I need to run it through terminal, as follows:
+```
+pw-jack reaper
+```
+
+This forces Reaper to run using the PipeWire-JACK audio driver. In my case, running Reaper in any other way, would cause it to being unable to find the correct driver and give an error. See [Troubleshooting](#troubleshootin) for details.
+
+#### X.1. Load eDrumIn in Reaper
+
+#### X.2. Load SD3 in Reaper
 
 #### X.3. Play
 
@@ -178,3 +219,5 @@ and verify the correct registration by checking if there the `~/.vst3/yabridge/`
 
 To edit later. Temporary notes:
 1) wineHQ instead of standard wine;
+2) audio distortion (64 vs 128 samples)
+3) Reaper does not fine JACK audio drivers and gives an error
