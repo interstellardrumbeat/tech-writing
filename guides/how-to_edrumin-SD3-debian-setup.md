@@ -23,22 +23,32 @@
 
 This guide is born primarily from a need I have at least once per year, since I often format my PC. Every time, I end up trying to trace back all the steps required to install all the necessary libraries, software, etc...to finally play my electronic drum kit with the MIDI interface **eDrumIn** and the VST **Superior Drummer 3 (SD3)** on Debian (currently 13, Trixie). 
 
+### Who this guide is for
+
+This guide is for Debian users who:
+- Are comfortable using the terminal
+- Have sudo access
+- Have basic knowledge of package managers (apt)
+- Are familiar with eDrumIn and SD3
+- Have a basic understandng of audio drivers
+
+If you are completely new to Linux, consider reviewing basic terminal commands first.
+
 ## Installation types
 
-The eDrumIn+SD3 setup on Debian can be used following different installation routes and setups (i.e. different bridges, software, audio drivers, DAWs, etc...). I have tested 3 ways, of which only one gives me the results I need and has proven effective. For completeness I will report a list of all the options, including the untested ones. 
+The eDrumIn+SD3 setup on Debian can be used following different installation routes and setups (i.e. different bridges, software, audio drivers, DAWs, etc...). I have tested 3 ways, of which only one gives me the results I need and that has proven effective. For completeness I will report a list of all the options, including the untested ones. 
 
-NOTE: the main limitation comes from SD3, which does not have a Linux version and must be always installed in Wine. This will be the common factor to the different installation paths.
-From there, it all comes down to "where you want to install eDrumIn and how you want to use SD3 (directly in Wine or bridge to Linux)".
+>NOTE: the main limitation comes from SD3, which does not have a Linux version and must be always installed in Wine. This will be the common factor to the different installation paths. From there, it all comes down to "where you want to install eDrumIn and how you want to use SD3 (directly in Wine or bridge to Linux)".
 
 | | **Setup** | **Description** | **How-to** |
 |----| --------- | ------------- | ----------- |
-| 1. | eDrumIn (Linux) + SD3 (wine) + yabridge (Linux) + DAW (Linux, e.g. Reaper) | SD3 bridged to Linux and operated through a DAW (e.g. Reaper), except for small tweaks done directly in wine (i.e. personalize the kit with the original SD3 GUI) | [Link to section](#setup-1---sd3-bridged-to-linux-daw) |
-| 2. | eDrumIn (Linux) + Pipewire-Jack (Linux) + SD3 (wine) + WineASIO (wine) | SD3 used without any DAW, directly in wine (as if in Windows) with the original fully working GUI | [Link to section](#) |
-| 3. | eDrumIn (Linux) + SD3 (wine) + yabridge (Linux) + Pipewire-Jack (Linux) + Carla (Linux) | SD3 bridged to Linux and operated through a Carla, except for small tweaks done directly in wine (i.e. personalize the kit with the original SD3 GUI) | [Link to section](#) |
+| 1. | eDrumIn (Linux) + SD3 (wine) + yabridge (Linux) + DAW (Linux, e.g. Reaper) | SD3 bridged to Linux and operated through a DAW (e.g. Reaper), except for small tweaks done directly in wine (i.e. personalize the kit with the original SD3 GUI) | [Link to section](#installation-and-use-of-sd3-bridged-to-a-linux-daw) |
+| 2. | eDrumIn (Linux) + Pipewire-Jack (Linux) + SD3 (wine) + WineASIO (wine) | SD3 used without any DAW, directly in wine (as if in Windows) with the original fully working GUI | na |
+| 3. | eDrumIn (Linux) + SD3 (wine) + yabridge (Linux) + Pipewire-Jack (Linux) + Carla (Linux) | SD3 bridged to Linux and operated through a Carla, except for small tweaks done directly in wine (i.e. personalize the kit with the original SD3 GUI) | na |
 
 ## System requirements
 
-The main requirements derive from SD3. 
+The main requirements comes from SD3. 
 - **FREE DISK SPACE**:
     - _Minimum install_ - 100 GB (basic sound library download and installation space, plus other software)
     - _Complete install_ - 325 GB (full sound library download and installation space, plus other software)
@@ -50,7 +60,7 @@ To efficiently play drums with this system I recommend an external AUDIO card/in
 
 Many cheap models are available, such as the Fosurite Scarlett Series, but some models handle low buffering samples (hence, lower latency) better than other. The limit is your budget.
 
-## SETUP 1 - SD3 bridged to Linux DAW
+## Installation and use of SD3 bridged to a Linux DAW
 
 The main features of this setup are:
 - eDrumIn on Linux
