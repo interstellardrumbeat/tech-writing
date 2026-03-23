@@ -55,4 +55,4 @@ If the JSON file conforms to the schema, you will see `measurement_example.json 
 
 ## Documentation
 
-See `schema-documentation.md` for detailed descriptions of each field.
+See `schema_documentation.md` for detailed descriptions of each field.
