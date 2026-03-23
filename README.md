@@ -2,12 +2,13 @@
 
 ## Overview
 
-This folder contains **technical writing samples** created for software, tools, and technical audiences.  
+This folder contains **technical writing samples** created for software, tools, instrumentation and technical audiences.  
 
-> Note for recruiters: These samples demonstrate my ability to produce **clear, user-focused documentation** with logical structure, consistent terminology and tone based on audience and topic, clear explaination of complex concepts and understanding of information architecture.
+> Note for recruiters: These samples demonstrate my ability to produce **clear, user-focused documentation** with logical structure, consistent terminology and tone based on audience and topic, clear explaination of complex concepts and understanding of information architecture and various data formats.
 
-## Guides
+## Projects / Guides
 
-Conceptual or procedural guides that explain **how to approach a specific problem**. Each guide is written to support readability, clarity, and practical usability.
-
-
+| Folder / Project             | Description |
+|-------------------------------|-------------|
+| `guides/`                     | Conceptual or procedural guides explaining specific tasks or workflows. |
+| `spectrometer-json/`          | JSON schema and documentation for FTIR spectrometer measurements, including: README.md, schema, example JSON, and schema_documentation.md. |
