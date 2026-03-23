@@ -1,4 +1,4 @@
-# Spectrometer Measurement JSON Format
+# Spectrometer Measurements - JSON Format
 
 This project defines a **JSON schema** for storing metadata from FTIR spectrometer measurements.  
 It describes the structure and validation rules for measurement metadata, including experiment identifiers, instrument details, scan parameters, environmental conditions, and spectrum data.
