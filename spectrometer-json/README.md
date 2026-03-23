@@ -49,6 +49,8 @@ ajv validate -s measurement_schema.json -d measurement_example.json
 ```
 If the JSON file conforms to the schema, you will see `measurement_example.json valid`.
 
+>NOTE: Requires [Node.js](https://nodejs.org). Works on Linux, macOS, and Windows.
+
 ## Documentation
 
 See `schema_documentation.md` for detailed descriptions of each field.
