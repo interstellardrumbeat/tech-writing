@@ -36,7 +36,7 @@ It describes the structure and validation rules for measurement metadata, includ
   }
 }
 ```
-The full JSON file is available in measurement.example.json for validation or download.
+The full JSON file is available in measurement_example.json for validation or download.
 
 ## Validation
 
@@ -45,7 +45,7 @@ You can validate the JSON file against the schema using standard JSON Schema val
 Example using `ajv-cli`:
 ```
 npm install -g ajv-cli
-ajv validate -s measurement.schema.json -d measurement.example.json
+ajv validate -s measurement_schema.json -d measurement_example.json
 ```
 If the JSON file conforms to the schema, you will see `measurement_example.json valid`.
 
