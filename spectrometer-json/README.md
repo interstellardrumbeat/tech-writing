@@ -11,7 +11,7 @@ It describes the structure and validation rules for measurement metadata, includ
 | -------------------------- | ------------------------------------------ |
 | `measurement_schema.json`  | JSON schema defining the data structure    |
 | `measurement_example.json` | Example measurement file that follows the schema |
-| `schema-documentation.md`      | Documentation of all the schema fields |
+| `schema_documentation.md`      | Documentation of all the schema fields |
 
 ---
 
