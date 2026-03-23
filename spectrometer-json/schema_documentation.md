@@ -3,8 +3,6 @@
 This document provides a reference for the `measurement_schema.json` used in the Spectrometer-JSON project.  
 It explains each field, its type, whether it is required, and its purpose.
 
----
-
 ## Top-level fields
 
 | Field              | Type    | Required | Description |
