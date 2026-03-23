@@ -11,4 +11,4 @@ This folder contains **technical writing samples** created for software, tools, 
 | Folder / Project             | Description |
 |-------------------------------|-------------|
 | `guides/`                     | Conceptual or procedural guides explaining specific tasks or workflows. |
-| `spectrometer-json/`          | JSON schema and documentation for FTIR spectrometer measurements, including: README.md, schema, example JSON, and schema_documentation.md. |
+| `spectrometer-json/`          | JSON schema and documentation for FTIR spectrometer measurements, including: readme, schema, example JSON, and the schema documentation. |
