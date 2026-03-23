@@ -3,6 +3,8 @@
 This document provides a reference for the `measurement_schema.json` used in the Spectrometer-JSON project.  
 It explains each field, its type, whether it is required, and its purpose.
 
+---
+
 ## Top-level fields
 
 | Field              | Type    | Required | Description |
@@ -13,6 +15,8 @@ It explains each field, its type, whether it is required, and its purpose.
 | measurement        | object | Yes     | Metadata about the measurement session. |
 | scan_parameters    | object | Yes     | Settings used for the scan. |
 | spectrum           | object | Yes     | Information about the recorded spectrum. |
+
+---
 
 ## Nested objects
 
