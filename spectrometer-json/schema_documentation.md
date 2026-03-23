@@ -58,6 +58,9 @@ It explains each field, its type, whether it is required, and its purpose.
 |---------------------------|-------|---------|-------------|
 | wavenumber_range_cm-1     | array | Yes     | Range of wavenumbers [min, max] in cm⁻¹. |
 | data_file                 | string| Yes     | Path to the spectrum data file. |
+
+---
+
 ## Notes
 
 - **Required fields** must be present in every JSON instance.  
