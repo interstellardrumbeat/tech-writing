@@ -2,6 +2,7 @@
 
 This diagram shows the structure of the **Measurement JSON schema**. 
 
+```
 Measurement  
 ├── experiment_id : string  
 ├── instrument : object  
@@ -23,3 +24,4 @@ Measurement
 └── spectrum : object  
     ├── wavenumber_range_cm-1 : array[number, number]  
     └── data_file : string  
+```
