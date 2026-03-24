@@ -1,4 +1,4 @@
-# Spectrometer Measurement Schema Reference
+# Spectrometer Measurement Schema Documentation
 
 This document provides a reference for the `measurement_schema.json` used in the **Spectrometer Measurements - JSON format** project.  
 It explains each field, its type, whether it is required, and its purpose.
