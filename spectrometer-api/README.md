@@ -1,6 +1,6 @@
 # IFS 125HR Bruker Spectrometer API
 
-> An open-source API for managing FTIR spectrometer measurement metadata.  
+An open-source API for managing FTIR spectrometer measurement metadata.  
 
 **Status:** Beta | **License:** MIT | **Version:** 1.0.0
 
