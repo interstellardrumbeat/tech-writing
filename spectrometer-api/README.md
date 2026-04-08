@@ -26,8 +26,6 @@ This project defines a standardized JSON schema for Fourier-Transform Infrared (
 | `openapi.yaml` | The OpenAPI 3.0 specification for the API. |
 | `docs/` | Documentation and guides. See the [Documentation](#documentation) section below for more details. |
 
----
-
 ## Quick Start
 
 ### 1. Validate Data Locally
@@ -78,8 +76,6 @@ result = create_measurement(my_data)
 ```
 
 **See the full SDK with error handling in the [Python SDK Guide](docs/python-sdk-example.md).**
-
----
 
 ## Documentation
 
