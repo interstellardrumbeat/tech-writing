@@ -1,0 +1,227 @@
+openapi: 3.0.3
+info:
+  title: IFS 125HR Bruker Spectrometer API
+  description: |
+    An open-source API for managing FTIR spectrometer measurement metadata.
+  version: 1.0.0
+  contact:
+    name: Dr. Domenico Prudenzano
+    url: https://github.com/yourusername
+servers:
+  - url: https://api.spectrometer.example.com/v1
+    description: Production server
+
+paths:
+  /measurements:
+    get:
+      summary: List all measurements
+      description: Returns a paginated list of measurement records.
+      parameters:
+        - name: page
+          in: query
+          schema:
+            type: integer
+            default: 1
+        - name: limit
+          in: query
+          schema:
+            type: integer
+            default: 20
+            maximum: 100
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MeasurementList'
+        '401':
+          description: Unauthorized
+
+    post:
+      summary: Create a new measurement
+      description: Submits a new measurement record for validation and storage.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MeasurementInput'
+      responses:
+        '201':
+          description: Created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MeasurementResponse'
+        '400':
+          description: Validation error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /measurements/{experiment_id}:
+    get:
+      summary: Get a specific measurement
+      parameters:
+        - name: experiment_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MeasurementResponse'
+        '404':
+          description: Not found
+
+components:
+  schemas:
+    MeasurementInput:
+      type: object
+      required:
+        - experiment_id
+        - instrument
+        - operator
+        - measurement
+        - scan_parameters
+        - spectrum
+      properties:
+        experiment_id:
+          type: string
+          example: "EXP-2026-03-21-001"
+        instrument:
+          $ref: '#/components/schemas/Instrument'
+        operator:
+          $ref: '#/components/schemas/Operator'
+        measurement:
+          $ref: '#/components/schemas/MeasurementMeta'
+        scan_parameters:
+          $ref: '#/components/schemas/ScanParameters'
+        spectrum:
+          $ref: '#/components/schemas/Spectrum'
+
+    Instrument:
+      type: object
+      required:
+        - name
+        - manufacturer
+        - resolution_cm-1
+      properties:
+        name:
+          type: string
+          example: "IFS 125HR"
+        manufacturer:
+          type: string
+          example: "Bruker"
+        resolution_cm-1:
+          type: number
+          example: 0.001
+
+    Operator:
+      type: object
+      required:
+        - name
+        - lab
+      properties:
+        name:
+          type: string
+          example: "Dr. Domenico Prudenzano"
+        lab:
+          type: string
+          example: "DrumBeat Spectroscopy Lab"
+
+    MeasurementMeta:
+      type: object
+      required:
+        - date
+        - location
+        - temperature_C
+        - pressure_hPa
+      properties:
+        date:
+          type: string
+          format: date-time
+          example: "2026-03-21T10:15:00Z"
+        location:
+          type: string
+          example: "Munich"
+        temperature_C:
+          type: number
+          example: 18.4
+        pressure_hPa:
+          type: number
+          example: 1012.3
+
+    ScanParameters:
+      type: object
+      required:
+        - number_of_scans
+        - apodization
+      properties:
+        number_of_scans:
+          type: integer
+          example: 128
+        scan_velocity_kHz:
+          type: number
+          example: 10
+        apodization:
+          type: string
+          example: "Happ-Genzel"
+
+    Spectrum:
+      type: object
+      required:
+        - wavenumber_range_cm-1
+        - data_file
+      properties:
+        wavenumber_range_cm-1:
+          type: array
+          items:
+            type: number
+          minItems: 2
+          maxItems: 2
+          example: [4100, 4500]
+        data_file:
+          type: string
+          example: "spectra/exp_20260321_001.dat"
+
+    MeasurementResponse:
+      allOf:
+        - $ref: '#/components/schemas/MeasurementInput'
+        - type: object
+          properties:
+            status:
+              type: string
+              example: "created"
+            created_at:
+              type: string
+              format: date-time
+
+    MeasurementList:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/MeasurementResponse'
+        pagination:
+          type: object
+          properties:
+            page:
+              type: integer
+            total:
+              type: integer
+
+    Error:
+      type: object
+      properties:
+        code:
+          type: string
+        message:
+          type: string
