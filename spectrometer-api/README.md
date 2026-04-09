@@ -82,14 +82,14 @@ result = create_measurement(my_data)
 For detailed guides and reference material, explore the documentation folder:
 
 ### API Interaction
-- **[API Reference](docs/api-reference.md)**: Endpoints, authentication, and request/response examples.
-- **[Getting Started](docs/getting-started.md)**: How to set up and validate data locally.
-- **[Python SDK Guide](docs/python-sdk-example.md)**: Complete code samples for integration.
+- **[API Reference](docs/api-reference.md)**: Endpoints, authentication, and request/response examples. _(To-Be-Added)_
+- **[Getting Started](docs/getting-started.md)**: How to set up and validate data locally. _(To-Be-Added)_
+- **[Python SDK Guide](docs/python-sdk-example.md)**: Complete code samples for integration. _(To-Be-Added)_
 
 ### Data Structure
 - **[Schema Reference](docs/schema_documentation.md)**: Detailed explanation of every field and data type.
 - **[Schema Diagram](docs/schema_diagram.md)**: Visual overview of the data hierarchy.
-- **[Validation Guide](docs/validation-guide.md)**: Instructions for using `ajv-cli`.
+- **[Validation Guide](docs/validation-guide.md)**: Instructions for using `ajv-cli`. _(To-Be-Added)_
 
 ## Contributing
 
