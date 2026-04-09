@@ -1,8 +1,8 @@
-# Technical Writing Portfolio
+# Technical Writing
 
 ## Overview
 
-This portfolio showcases technical documentation for software, APIs, scientific instrumentation, and developer tools. Each sample demonstrates the ability to translate complex technical concepts into clear, actionable content for diverse audiences, from researchers to engineers.
+This repository showcases technical documentation for software, APIs, scientific instrumentation, and developer tools. Each sample demonstrates the ability to translate complex technical concepts into clear, actionable content for diverse audiences, from researchers to engineers.
 
 > **For Recruiters:** These samples highlight proficiency in API documentation, schema design, user guides, and information architecture across multiple formats (Markdown, OpenAPI, JSON Schema).
 
