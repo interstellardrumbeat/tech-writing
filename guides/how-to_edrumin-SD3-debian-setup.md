@@ -220,19 +220,97 @@ pw-jack reaper
 
 This forces it to run using the PipeWire-JACK audio driver. In my case, running Reaper in any other way, would cause it to being unable to find the correct driver and give an error. See [Troubleshooting](#troubleshooting) for details.
 
-#### 8.1. Load eDrumIn in Reaper
+#### 8.1. Load eDrumIn
 
-#### 8.2. Load SD3 in Reaper
+Once Reaper is running via PipeWire-JACK, ensure your eDrumIn is correctly recognized as a MIDI input within the DAW.
 
-#### 8.3. Play
+Go to:
+```
+Options → Preferences → Audio → MIDI Devices
+```
 
-## Post installation
+Scroll down till the end of the 'input' list and look for eDrumIn.
 
-### Configuration options
+If it appears:
+- Right-click it → Enable input
+- Right-click it again → Enable input for control messages (optional, not strictly required for drums)
+
+If it does NOT appear:
+- Verify USB connection
+- Check with:
+```
+aconnect -l
+```
+
+#### 8.2. Create a drum track
+
+Create a new track in Reaper:
+```
+Track → Insert new track
+```
+
+Arm the track for recording by clicking the **red Arm button**.
+
+Once armed, click the input selector:
+```
+MIDI Input → eDrumIn → All Channels
+```
+
+Then enable monitoring (i.e. the output) by clicking the speaker icon on the track (Input Monitoring ON).
+
+At this point, hitting pads should show MIDI activity on the track meter, but no sounds, since the VST is still not loaded.
+
+#### 8.3. Load SD3
+
+Now you will load SD3 as a VST3 instrument inside Reaper via yabridge.
+
+On the same armed track created in the previous step:
+```
+FX → Add FX → Search: “Superior Drummer 3”
+```
+
+and select `Superior Drummer 3 (yabridge`.
+
+This version is important since it confirms SD3 is correctly bridged from Wine.
+
+#### 8.4 Configure MIDI routing inside SD3
+
+>This procedure must be done thrpough SD3 in Wine, since the SD3 interface within reaper is buggy and doesn't work properly. 
+
+Open SD3 directly in Wine. Inside the SD3 interface go to:
+```
+Settings → MIDI In/E-Drums
+```
+
+Ensure input is set to `All MIDI Inputs`, or specifically eDrumIn if visible.
+Load a preset kit or default mapping.
+
+#### 8.4. Play
+
+At this point, your signal chain should be:
+```
+eDrumIn → Reaper (MIDI track) → SD3 (via yabridge) → PipeWire-JACK → Audio Interface → Speakers/Headphones
+```
+
+Within Reaper you should now hear sounds when hitting your pads.  
+>IMPORTANT: Be sure the drum track in Reaper is armed (red button active), otherwise no sound will be produced.
 
 ## Troubleshooting
 
-To edit later. Temporary notes:
-1) wineHQ instead of standard wine;
-2) audio distortion (64 vs 128 samples)
-3) Reaper does not fine JACK audio drivers and gives an error
+**1) When I play, the sound is heavily distorted.**
+
+In this case, it means your Audio interface does not support 64 buffering samples. 
+You must reconfigure the latency configuration file for 128 samples, as follows:
+
+```
+context.properties = {
+    default.clock.rate          = 48000
+    default.clock.quantum       = 128
+    default.clock.min-quantum   = 64
+    default.clock.max-quantum   = 264
+}
+```
+
+This will fix the distortion, but will introduce a bit of latency. 
+
+A better, but more expensive solution would be to buy an Audio interface that support smaller buffer samples. 
