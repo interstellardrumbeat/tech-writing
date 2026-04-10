@@ -7,7 +7,6 @@
 - [System requirements](#system-requirements)
 - [Before you begin](#before-you-begin)
 - [SETUP 1 - SD3 bridged to Linux DAW](#setup-1---sd3-bridged-to-linux-daw)
-- [Post installation](#post-installation)
 - [Troubleshooting](#troubleshooting)
 
 ## Glossary
